@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.li.IMP.UserDaoIMP">
+    <select id="selectPerson" parameterType="attackforce.shareplan.domain.vo.PersonVO" resultType="attackforce.shareplan.domain.vo.PersonVO">
+      select * from person where name=#{name}
+    </select>
+    <select id="selectAllPerson" resultType="attackforce.shareplan.domain.vo.PersonVO">
+      select * from person
+    </select>
+    <insert id="insertUser" parameterType="attackforce.shareplan.domain.vo.PersonVO" flushCache="true">
+      insert into person(name,pwd) values(#{name},#{pwd})
+    </insert>
+    <update id="updateUser" parameterType="attackforce.shareplan.domain.vo.PersonVO">
+      update person set name=#{name} where id=#{id}
+    </update>
+    <delete id="deleteUser" parameterType="int">
+      delete from person where id=#{id}
+    </delete>
+  </mapper>

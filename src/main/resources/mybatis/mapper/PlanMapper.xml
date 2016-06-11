@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC   
+    "-//mybatis.org//DTD Mapper 3.0//EN"  
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Plan">
+    
+	<select id="selectPlanById" parameterType="int" resultType="Plan">
+		<!--[CDATA[ select * from plan where id = #{id} ]] -->
+	</select>
+	
+	<select id="selectAllPlans" resultType="Plan">
+		<!--[CDATA[ select * from plan ]] -->
+	</select>
+	
+</mapper>
