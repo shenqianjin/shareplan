@@ -31,6 +31,13 @@ public class PlanController {
         model.addAttribute("plan", new Plan());
         return "plan/add";
     }
+    @RequestMapping(value = "/plan/add_form")
+    public String add_form(Model model) {
+        List<Person> persons = planService.getAllPerson();
+        model.addAttribute("persons", persons);
+        model.addAttribute("plan", new Plan());
+        return "plan/add_form";
+    }
 
     @RequestMapping(value = "/plan/edit/{id}")
     public String editPlan(Model model, @PathVariable long id) {

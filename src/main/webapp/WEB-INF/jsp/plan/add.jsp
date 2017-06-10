@@ -5,14 +5,22 @@
 <html>
 <head>
 <title>Add plan Form</title>
-<style type="text/css">
-@import
-url(
-"<c:url value="
-/
-css
-/main.css"/>");
-</style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+<script language="javascript" type="text/javascript">     
+      function ShowPasswordBox()
+      {
+    	  window.alert("Hello World!");
+        // 显示密码输入框
+        var pwd = window.open ("add_form","Sample","fullscreen=no,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no, copyhistory=no,width=350,height=140,left=200,top=300");
+        if(pwd)
+        {
+          // 设置显示内容为输入框中的内容
+          document.getElementById("showpwd").value = pwd;
+        }        
+      }
+    </script>
+    
 </head>
 <body>
 
@@ -62,5 +70,9 @@ css
 			</fieldset>
 		</form:form>
 	</div>
+	
+	<input type="button" value="button" onclick="ShowPasswordBox()"/>
+    <input type="text" name="showpwd" id="showpwd" />
+    
 </body>
 </html>
