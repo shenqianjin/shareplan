@@ -1,27 +1,29 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
-<title>Edit plan Form</title>
+<title>Add plan Form</title>
 <style type="text/css">
-body {
-	text-align: left;
-}
+@import
+url(
+"<c:url value="
+/
+css
+/main.css"/>");
 </style>
 </head>
 <body>
+
 	<div id="global">
-		<c:url var="formAction" value="/update-plan" />
-		<form:form commandName="plan" action="${formAction}" method="post">
+		<form:form commandName="plan" action="plan/save" method="post">
 			<fieldset>
-				<legend>Edit a Plan</legend>
-				<form:hidden path="id" />
+				<legend>Add a plan</legend>
 				<p>
 					<label for="person">Person: </label>
-					<form:select id="person" path="person.id" items="${persons}"
-						itemLabel="name" itemValue="id" />
+					<form:select id="person" path="person.name" items="${persons}"
+						itemLabel="name" itemValue="name" />
 				</p>
 				<p>
 					<label for="subject">Subject: </label>
@@ -43,6 +45,7 @@ body {
 					<label for="expiryDate">ExpiryDate: </label>
 					<form:input id="expiryDate" path="expiryDate" />
 				</p>
+
 				<p>
 					<label for="status">Status: </label>
 					<form:input id="status" path="status" />
@@ -54,7 +57,7 @@ body {
 
 				<p id="buttons">
 					<input id="reset" type="reset" tabindex="4"> <input
-						id="submit" type="submit" tabindex="5" value="Update Plan">
+						id="submit" type="submit" tabindex="5" value="Add Plan">
 				</p>
 			</fieldset>
 		</form:form>

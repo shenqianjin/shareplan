@@ -13,7 +13,7 @@ text-align: center;
 <body>
 	<div id="global">
 		<h1>Plan List</h1>
-		<a href="<c:url value="/input-plan"/>">Add Plan</a>
+		<a href="<c:url value="/plan/add"/>">Add Plan</a>
 		<br/>
 		<br/>
 		<br/>

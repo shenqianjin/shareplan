@@ -28,10 +28,10 @@ public class PlanServiceImpl implements PlanService {
     
     public PlanServiceImpl() {
         personList = new ArrayList<Person>();
-        Person person1 = new Person("Áõ½Ü", "¹ãÖİ", "1@qq.com");
-        Person person2 = new Person("ÑîºÆ", "¹óÑô", "2@qq.com");
-        Person person3 = new Person("ºÎ²©", "ÏÃÃÅ", "3@qq.com");
-        Person person4 = new Person("Ç°½ø", "ÉÏº£", "3@qq.com");
+        Person person1 = new Person("æ²ˆå‰è¿›", "13388888888", "1@qq.com");
+        Person person2 = new Person("åˆ˜æ°", "18766666666", "2@qq.com");
+        Person person3 = new Person("ä½•åš", "18723452345", "3@qq.com");
+        Person person4 = new Person("æ¨æµ©", "189898898989", "3@qq.com");
 
         person1.setId(1);
         person2.setId(2);
@@ -44,10 +44,10 @@ public class PlanServiceImpl implements PlanService {
         personList.add(person4);
         
         plans = new ArrayList<Plan>();
-        plans.add(new Plan(person1, "Core JavaÖªÊ¶µã", "½éÉÜ10¸ö¡¶Think in Java¡·ÖĞµÄCore JavaÖªÊ¶µã", "Ñ§Ï°ÖĞ", "Ñ§Ï°ÖĞ", "2016-06-11", "2016-06-18", ""));
-        plans.add(new Plan(person2, "Êı¾İ¿â½éÉÜ", "1.Êı¾İ¿âÀàĞÍ; 2.JDBC; 3.Mapping¼¼Êõ", "Ñ§Ï°ÖĞ", "Ñ§Ï°ÖĞ", "2016-06-11", "2016-06-25", ""));
-        plans.add(new Plan(person3, "RubyÑ§Ï°", "½éÉÜ¡¶Think in Java¡·ÖĞµÄCore JavaÖªÊ¶µã", "Ñ§Ï°ÖĞ", "Ñ§Ï°ÖĞ", "2016-06-11", "2016-07-02", ""));
-        plans.add(new Plan(person4, "´óÊı¾İ", "´óÊı¾İÁË½â", "Ñ§Ï°ÖĞ", "Ñ§Ï°ÖĞ", "2016-06-11", "2016-07-09", ""));
+        plans.add(new Plan(person1, "Core Javaä»å…¥é—¨åˆ°ç²¾é€š", "Javaæ ¸å¿ƒæ€æƒ³", "æè¿°1", "å¤‡æ³¨1", "2016-06-11", "2016-06-18", ""));
+        plans.add(new Plan(person2, "Core Javaä»å…¥é—¨åˆ°ç²¾é€š2", "Javaæ ¸å¿ƒæ€æƒ³2", "æè¿°2", "å¤‡æ³¨2", "2016-06-11", "2016-06-25", ""));
+        plans.add(new Plan(person3, "Core Javaä»å…¥é—¨åˆ°ç²¾é€š3", "Javaæ ¸å¿ƒæ€æƒ³3", "æè¿°3", "å¤‡æ³¨3", "2016-06-11", "2016-07-02", ""));
+        plans.add(new Plan(person4, "Core Javaä»å…¥é—¨åˆ°ç²¾é€š4", "Javaæ ¸å¿ƒæ€4", "æè¿°4", "å¤‡æ³¨4", "2016-06-11", "2016-07-09", ""));
 
         plans.get(0).setId(1);
         plans.get(1).setId(1);

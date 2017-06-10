@@ -24,24 +24,24 @@ public class PlanController {
 
     private static final Log logger = LogFactory.getLog(PlanController.class);
 
-    @RequestMapping(value = "/input-plan")
+    @RequestMapping(value = "/plan/add")
     public String inputPlan(Model model) {
         List<Person> persons = planService.getAllPerson();
         model.addAttribute("persons", persons);
         model.addAttribute("plan", new Plan());
-        return "PlanAddForm";
+        return "plan/add";
     }
 
-    @RequestMapping(value = "/edit-plan/{id}")
+    @RequestMapping(value = "/plan/edit/{id}")
     public String editPlan(Model model, @PathVariable long id) {
         List<Person> persons = planService.getAllPerson();
         model.addAttribute("persons", persons);
         Plan plan = planService.get(id);
         model.addAttribute("plan", plan);
-        return "PlanEditForm";
+        return "plan/edit";
     }
 
-    @RequestMapping(value = "/save-plan")
+    @RequestMapping(value = "/plan/save")
     public String savePlan(@ModelAttribute Plan plan) {
     	List<Person> personList = planService.getPersonByName(plan.getPerson().getName());
 
@@ -52,23 +52,23 @@ public class PlanController {
     	plan.setPerson(person);
         planService.save(plan);
         logger.info("*** saving new plan... " + plan);
-        return "redirect:/list-plans";
+        return "redirect:/plan/list";
     }
 
-    @RequestMapping(value = "/update-plan")
+    @RequestMapping(value = "/plan/edit")
     public String updatePlan(@ModelAttribute Plan plan) {
         Person person = planService.getPersonById(plan.getPerson().getId());
         plan.setPerson(person);
         planService.update(plan);
         logger.info("=== updating editted plan... " + plan);
-        return "redirect:/list-plans";
+        return "redirect:/plan/list";
     }
 
-    @RequestMapping(value = "/list-plans")
+    @RequestMapping(value = "/plan/list")
     public String listPlans(Model model) {
         logger.info("list-plans ... ");
         List<Plan> plans = planService.getAllPlans();
         model.addAttribute("plans", plans);
-		return "PlanList";
+		return "plan/list";
     }
 }
