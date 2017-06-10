@@ -4,7 +4,6 @@ import java.util.List;
 
 import attackforce.shareplan.domain.Person;
 import attackforce.shareplan.domain.Plan;
-import attackforce.shareplan.domain.vo.PersonVO;
 
 public interface PlanService {
 	public  List<Person> selectAllPerson();

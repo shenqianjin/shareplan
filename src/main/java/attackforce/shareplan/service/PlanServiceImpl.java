@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 import attackforce.shareplan.dao.PersonDao;
 import attackforce.shareplan.domain.Person;
 import attackforce.shareplan.domain.Plan;
-import attackforce.shareplan.domain.vo.PersonVO;
 
 @Service
 public class PlanServiceImpl implements PlanService {
